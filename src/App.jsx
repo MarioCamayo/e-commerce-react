@@ -2,7 +2,7 @@
 const App = () => {
   return (
     <div>
-      <h1>E-commerce Poleras</h1>
+      <h1>SpringStore</h1>
     </div>
   )
 }
