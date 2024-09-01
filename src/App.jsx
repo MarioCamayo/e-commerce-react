@@ -9,7 +9,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}/>
       </Routes>
-      {/* <hr style={{color:"green", border:"2px solid"}}/> */}
       {/* <h1>SpringStore🏆</h1> */}
     </div>
   )
