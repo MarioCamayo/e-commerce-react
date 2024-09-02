@@ -9,7 +9,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}/>
       </Routes>
-      {/* <h1>SpringStore🏆</h1> */}
     </div>
   )
 }
