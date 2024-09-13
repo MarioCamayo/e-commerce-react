@@ -1,6 +1,15 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import NavBar from "./components/NavBar"
+import About from "./pages/About"
+import Card from "./pages/Card"
+import Collections from "./pages/Collections"
+import Contact from "./pages/Contact"
+import Login from "./pages/Login"
+import Orders from "./pages/Orders"
+import Placeorden from "./pages/Placeorden"
+import Product from "./pages/Product"
+
 
 const App = () => {
   return (
@@ -8,6 +17,14 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/collection" element={<Collections />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/placeorden" element={<Placeorden />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </div>
   )
