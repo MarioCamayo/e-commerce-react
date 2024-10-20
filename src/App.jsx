@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import NavBar from "./components/NavBar"
 import About from "./pages/About"
-import Card from "./pages/Card"
+import Card from "./pages/Cart"
 import Collections from "./pages/Collections"
 import Contact from "./pages/Contact"
 import Login from "./pages/Login"
@@ -11,11 +11,14 @@ import PlaceOrden from "./pages/PlaceOrden"
 import Product from "./pages/Product"
 import { Footer } from "./components/Footer"
 import SearchBar from "./components/SearchBar"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <ToastContainer />
       <NavBar />
       <SearchBar />
       <Routes>
