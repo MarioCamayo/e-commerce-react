@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import NavBar from "./components/NavBar"
 import About from "./pages/About"
-import Card from "./pages/Cart"
+import Cart from "./pages/Cart"
 import Collections from "./pages/Collections"
 import Contact from "./pages/Contact"
 import Login from "./pages/Login"
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:productId" element={<Product />} />
-        <Route path="/card" element={<Card />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/placeorden" element={<PlaceOrden />} />
         <Route path="/orders" element={<Orders />} />
@@ -38,3 +38,4 @@ const App = () => {
 }
 
 export default App
+
