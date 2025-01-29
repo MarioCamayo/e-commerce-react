@@ -1,6 +1,7 @@
 
 import Title from './../components/Title';
 import { assets } from './../assets/assets';
+import { NewsLetterBox } from './../components/NewsLetterBox';
 const Contact = () => {
   return (
     <div>
@@ -24,6 +25,8 @@ const Contact = () => {
                   <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explorar empleos</button>
               </div>
         </div>
+
+        <NewsLetterBox />
     </div>
   )
 }

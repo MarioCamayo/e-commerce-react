@@ -101,93 +101,96 @@ const Collections = () => {
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
 
-    <div className="min-w-60">
-      {/* filter */}
-      <p onClick={()=>setShowFilter(!showFilter)} className="my-2 text-xl flex items-center cursor-pointer gap-2 ">
-        FILTERS
-        <img
-          className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`}
-          src={assets.dropdown_icon}
-          alt="dropdown_icon"
-        />
-      </p>
-      {/* Category Filter */}
-      <div
-        className={`border border-gray-300 pl-5 py-3 mt-6 ${
-          showFilter ? "" : "hidden"
-        } sm:block`}
-      >
-        <p className="mb-3 text-sm font-medium">CATEGORIES</p>
-        <div className="flex flex-col gap-2 text-sm font-ligth text-gray-700">
-          <p className="flex gap-2">
-            <input className="w-3" type="checkbox" value={"Men"}onChange={toggleCategory}  />
-            Men
-          </p>
-          <p className="flex gap-2">
-            <input className="w-3" type="checkbox" value={"Women"} onChange={toggleCategory} />
-            Women
-          </p>
-          <p className="flex gap-2">
-            <input className="w-3" type="checkbox" value={"Kids"} onChange={toggleCategory} />
-            Kids
-          </p>
-        </div>
-      </div>
+      {/* filtrar las opciones */}
+          <div className="min-w-60">
+              <p onClick={()=>setShowFilter(!showFilter)}
+               className="my-2 text-xl flex items-center cursor-pointer gap-2 ">
+                FILTRAR
+                    <img
+                      className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`}
+                      src={assets.dropdown_icon}
+                      alt="dropdown_icon"
+                    />
+              </p>
+            {/* Category Filter */}
+            <div className={`border border-gray-300 pl-5 py-3 mt-6 ${
+                showFilter 
+                ? ""
+                : "hidden"
+              } sm:block`}
+            >
+               <p className="mb-3 text-sm font-medium">CATEGORIAS</p>
+               <div className="flex flex-col gap-2 text-sm font-ligth text-gray-700">
+                  <p className="flex gap-2">
+                      <input className="w-3" type="checkbox" value={"Men"}onChange={toggleCategory}  />
+                       HOMBRE
+                  </p>
 
-      {/* subcategory filter */}
-      <div
-        className={`border border-gray-300 pl-5 py-3 mt-5 ${
-          showFilter ? "" : "hidden"
-        } sm:block`}
-      >
-        <p className="mb-3 text-sm font-medium">TYPE</p>
-        <div className="flex flex-col gap-2 text-sm font-ligth text-gray-700">
-          <p className="flex gap-2">
-            <input className="w-3" type="checkbox" value={"Topwear"}onChange=
-             {toggleSubCategory}  />
-            Topwear
-          </p>
-          <p className="flex gap-2">
-            <input className="w-3" type="checkbox" value={"Bottonwear"} onChange= {toggleSubCategory} />
-            Bottonwear
-          </p>
-          <p className="flex gap-2">
-            <input className="w-3" type="checkbox" value={"Winterwear"} onChange= {toggleSubCategory} />
-            Winterwear
-          </p>
-        </div>
-      </div>
-    </div>
+                  <p className="flex gap-2">
+                    <input className="w-3" type="checkbox" value={"Women"} onChange={toggleCategory} />
+                    MUJER
+                  </p>
 
-    {/* Right Side */}
+                  <p className="flex gap-2">
+                    <input className="w-3" type="checkbox" value={"Kids"} onChange={toggleCategory} />
+                    NIÑOS
+                  </p>
+               </div>
+            </div>
 
-    <div className="flex-1">
+            {/* subcategory filter */}
+            <div className={`border border-gray-300 pl-5 py-3 mt-5 ${
+                showFilter ? "" : "hidden"
+              } sm:block`}
+            >
+              <p className="mb-3 text-sm font-medium">TYPE</p>
+              <div className="flex flex-col gap-2 text-sm font-ligth text-gray-700">
+                <p className="flex gap-2">
+                  <input className="w-3" type="checkbox" value={"Topwear"}onChange=
+                  {toggleSubCategory}  />
+                  Topwear
+                </p>
+                <p className="flex gap-2">
+                  <input className="w-3" type="checkbox" value={"Bottonwear"} onChange= {toggleSubCategory} />
+                  Bottonwear
+                </p>
+                <p className="flex gap-2">
+                  <input className="w-3" type="checkbox" value={"Winterwear"} onChange= {toggleSubCategory} />
+                  Winterwear
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <div className="flex justify-between text-base sm:text-2xl mb-4">
-        <Title  text1={'ALL'} text2= {'COLLECTIONS'} />
-        {/* Products Sort */}
-        <select onChange= {(e)=>setSortType(e.target.value)}  className="border-2 border-gray-300 text-sm px-2" >
-          <option value="relavent">Sort by:Relavent</option>
-          <option value="low-high">Sort by:Low to High</option>
-          <option value="high-low">Sort by:High to Low</option>  
-        </select>
-      </div>
+          {/* Right Side */}
 
-      {/* Map Products */}
-      
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
-       {filterProducts.map((item, index)=>(
-         <ProductItem 
-          key={index} 
-          name= {item.name}
-          id={item.id}
-          price={item.price}
-          image={item.image}
-           />
-       ))}
-      </div>
+          <div className="flex-1">
 
-    </div>
+            <div className="flex justify-between text-base sm:text-2xl mb-4">
+              <Title  text1={'ALL'} text2= {'COLLECTIONS'} />
+              {/* Products Sort */}
+              <select onChange= {(e)=>setSortType(e.target.value)}  className="border-2 border-gray-300 text-sm px-2" >
+                <option value="relavent">Ordenar:Relativo</option>
+                <option value="low-high">Ordenar:De menor a mayor</option>
+                <option value="high-low">Ordenar:De mayor a menor</option>  
+              </select>
+            </div>
+
+            {/* Map Products */}
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
+            {filterProducts.map((item, index)=>(
+              <ProductItem 
+                key={index} 
+                name= {item.name}
+                id={item.id}
+                price={item.price}
+                image={item.image}
+                />
+            ))}
+            </div>
+
+          </div>
     </div>
   );
 };
