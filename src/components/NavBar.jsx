@@ -58,7 +58,7 @@ const NavBar = () => {
               <img className='w-6 min-w-5' src= {assets.cart_icon}  alt="cart_icon" />
               <p className='absolute right-[-5px] bottom-[-6px] w-5 text-center leading-5 bg-black text-white aspect-square rounded-full text-[12px]'>{getCartCount()}</p>
           </Link>
-          <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer' src= {assets.menu_icon} alt="menu_icon" />
+          <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer sm:hidden' src= {assets.menu_icon} alt="menu_icon" />
       </div>
 
       <div className={`absolute top-0 right-0 bottom-0 overflow-hidden w-full h-screen bg-white transition-all ${visible ? 'block' : 'hidden'} `}>
