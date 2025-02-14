@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <div className="flex items-center justify-between py-5 font-medium" >
 
-      <Link to="/"><img src= {assets.logo2} className='w-37 h-12' alt="Logo" /></Link>
+      <Link to="/"><img src= {assets.logo2} className='w-32   h-12 ' alt="Logo" /></Link>
 
       <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
 
@@ -34,7 +34,8 @@ const NavBar = () => {
         </NavLink>
       </ul>
 
-      <div className='flex items-center gap-6'>
+      <div className='flex items-center gap-6  pl-5'>
+         {/* pl-5 */}
           <img 
           className='w-5 cursor-pointer'
            src= {assets.search_icon} 
@@ -58,13 +59,14 @@ const NavBar = () => {
               <img className='w-6 min-w-5' src= {assets.cart_icon}  alt="cart_icon" />
               <p className='absolute right-[-5px] bottom-[-6px] w-5 text-center leading-5 bg-black text-white aspect-square rounded-full text-[12px]'>{getCartCount()}</p>
           </Link>
-          <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer sm:hidden' src= {assets.menu_icon} alt="menu_icon" />
+          <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer sm:hidden mr-5' src= {assets.menu_icon} alt="menu_icon" />
+          {/* mr-5 */}
       </div>
 
       <div className={`absolute top-0 right-0 bottom-0 overflow-hidden w-full h-screen bg-white transition-all ${visible ? 'block' : 'hidden'} `}>
         <div className='flex flex-col text-gray-600' >
-          <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer px-10 justify-end'>
-              <img className='h-4 rotate-180' src={ assets.dropdown_icon} alt="dropdown_icon" />
+          <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3   cursor-pointer px-10 justify-end'>
+              <img className='h-4 rotate-180 ' src={ assets.dropdown_icon} alt="dropdown_icon" />
               <p>Atrás</p>
           </div>
           <NavLink className='py-2 pl-6 border' to='/'>INICIO</NavLink>
