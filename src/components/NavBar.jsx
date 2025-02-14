@@ -34,7 +34,7 @@ const NavBar = () => {
         </NavLink>
       </ul>
 
-      <div className='flex items-center gap-6  pl-5'>
+      <div className='flex items-center gap-6 '>
          {/* pl-5 */}
           <img 
           className='w-5 cursor-pointer'
@@ -59,7 +59,7 @@ const NavBar = () => {
               <img className='w-6 min-w-5' src= {assets.cart_icon}  alt="cart_icon" />
               <p className='absolute right-[-5px] bottom-[-6px] w-5 text-center leading-5 bg-black text-white aspect-square rounded-full text-[12px]'>{getCartCount()}</p>
           </Link>
-          <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer sm:hidden mr-5' src= {assets.menu_icon} alt="menu_icon" />
+          <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer sm:hidden ' src= {assets.menu_icon} alt="menu_icon" />
           {/* mr-5 */}
       </div>
 
